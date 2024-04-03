@@ -35,9 +35,8 @@ Heapify extends the Array class with the following methods:
 Transforms an array into a heap in-place. It has a time complexity of O(n) and a space complexity of O(1).
 
 ```ruby
-array = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
-array.heapify
-# array => [1, 2, 3, 4, 7, 9, 10, 14, 8, 16]
+heap = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
+heap.heapify # => [1, 2, 3, 4, 7, 9, 10, 14, 8, 16]
 ```
 
 ### `heap_push(val)`
@@ -45,10 +44,8 @@ array.heapify
 This method adds an element to the heap. It has a time complexity of O(log n) and a space complexity of O(1).
 
 ```ruby
-array = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
-array.heapify
-array.heap_push(5)
-# array => [1, 2, 3, 4, 5, 9, 10, 14, 8, 7, 16]
+heap = [1, 2, 3, 4, 7, 9, 10, 14, 8, 16]
+heap.heap_push(5) # array => [1, 2, 3, 4, 5, 9, 10, 14, 8, 7, 16]
 ```
 
 ### `heap_pop`
@@ -56,11 +53,8 @@ array.heap_push(5)
 This method removes the smallest element from the heap and returns it. It has a time complexity of O(log n) and a space complexity of O(1).
 
 ```ruby
-array = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
-array.heapify
-array.heap_pop
-# => 1
-# array => [2, 4, 3, 7, 16, 9, 10, 14, 8]
+heap = [1, 2, 3, 4, 7, 9, 10, 14, 8, 16]
+heap.heap_pop # => 1
 ```
 
 ## Contributing
