@@ -1,8 +1,8 @@
 example_id                      | status | run_time        |
 ------------------------------- | ------ | --------------- |
-./spec/heapify_spec.rb[1:1]     | passed | 0.00057 seconds |
-./spec/heapify_spec.rb[1:2:1:1] | passed | 0.00042 seconds |
-./spec/heapify_spec.rb[1:2:1:2] | passed | 0.00006 seconds |
-./spec/heapify_spec.rb[1:2:2:1] | passed | 0.00007 seconds |
-./spec/heapify_spec.rb[1:2:3:1] | passed | 0.00006 seconds |
-./spec/heapify_spec.rb[1:2:4:1] | passed | 0.00008 seconds |
+./spec/heapify_spec.rb[1:1]     | passed | 0.00112 seconds |
+./spec/heapify_spec.rb[1:2:1:1] | passed | 0.00081 seconds |
+./spec/heapify_spec.rb[1:2:1:2] | passed | 0.00008 seconds |
+./spec/heapify_spec.rb[1:2:2:1] | passed | 0.00009 seconds |
+./spec/heapify_spec.rb[1:2:3:1] | passed | 0.00009 seconds |
+./spec/heapify_spec.rb[1:2:4:1] | passed | 0.00011 seconds |

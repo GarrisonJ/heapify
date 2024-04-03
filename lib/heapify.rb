@@ -43,12 +43,7 @@ module Heapify
     private
 
     def heapify_down(index)
-      left = 2 * index + 1
-      right = 2 * index + 2
-      smallest = index
-
-      smallest = left if left < size && (self[left] <=> self[smallest]) == -1
-      smallest = right if right < size && (self[right] <=> self[smallest]) == -1
+      smallest = find_smallest(index)
 
       return if smallest == index
 
@@ -56,10 +51,22 @@ module Heapify
       heapify_down(smallest)
     end
 
+    # Find the smallest element between the current index and its children.
+    def find_smallest(index)
+      left = (2 * index) + 1
+      right = (2 * index) + 2
+      smallest = index
+
+      smallest = left if left < size && (self[left] <=> self[smallest]) == -1
+      smallest = right if right < size && (self[right] <=> self[smallest]) == -1
+
+      smallest
+    end
+
     def heapify_up(index)
       parent = (index - 1) / 2
 
-      return if index.zero? || (self[parent] <=> self[index]) <= 0 
+      return if index.zero? || (self[parent] <=> self[index]) <= 0
 
       swap(index, parent)
       heapify_up(parent)
