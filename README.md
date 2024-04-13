@@ -6,6 +6,10 @@ The API below differs from textbook heap algorithms in two aspects: (a) We use z
 
 These two make it possible to view the heap as a regular Ruby list without surprises: heap[0] is the smallest item, and heap.sort maintains the heap invariant!
 
+## Why not a Heap class?
+
+Using an Array allows random access to the heap's elements. If we use a Heap class, we cannot allow random access while guaranteeing the heap invariant. For the same reason, we cannot efficiently implement Enumerable for a Heap class, but with the Array, we don't have to worry about that. It's obvious that it's the user's responsibility to maintain the heap. This makes using an Array much more flexible. 
+
 ## Installation
 
 Add this line to your application's Gemfile:
